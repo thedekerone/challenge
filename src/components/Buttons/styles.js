@@ -21,3 +21,12 @@ export const Switch = styled.div`
 		transition: .2s;
 	}
 `;
+
+export const Submit = styled.div`
+	width: 100%;
+	background: black;
+	color: white;
+	text-align: center;
+	box-sizing: border-box;
+	padding: .8rem;
+`;

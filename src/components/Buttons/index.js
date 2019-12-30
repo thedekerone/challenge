@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Switch } from './styles';
+import { Switch, Submit } from './styles';
 
 export const SwitchButton = () => {
 	const [
@@ -15,4 +15,8 @@ export const SwitchButton = () => {
 			}}
 		/>
 	);
+};
+
+export const SubmitButton = (props) => {
+	return <Submit>{props.children}</Submit>;
 };
