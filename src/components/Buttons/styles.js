@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const Switch = styled.div`
 	width: 54px;
@@ -22,8 +23,9 @@ export const Switch = styled.div`
 	}
 `;
 
-export const Submit = styled.div`
+export const Submit = styled(Link)`
 	width: 100%;
+	display:block;
 	background: black;
 	color: white;
 	text-align: center;

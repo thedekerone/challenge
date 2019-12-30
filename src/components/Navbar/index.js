@@ -1,10 +1,10 @@
 import React from 'react';
 import { Container, Logo } from './styles';
 
-export const Navbar = () => {
+export const Navbar = (props) => {
 	return (
 		<Container>
-			<Logo>Mag.</Logo>
+			<Logo to={props.to}>Mag.</Logo>
 		</Container>
 	);
 };

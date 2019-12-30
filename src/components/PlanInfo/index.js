@@ -1,39 +1,26 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Container, Price, Small, PriceContainer, MainInfo, PlanBenefits, List, ListItem } from './styles';
 import { Description } from './styles';
 import { SubmitButton } from '../Buttons';
+import { PlanBenefitsList } from '../PlanBenefitsList';
+import { ThemeContext } from 'styled-components';
 
-export const PlanInfo = ({ price = '29' }) => {
+export const PlanInfo = () => {
+	const context = useContext(ThemeContext);
 	return (
 		<Container>
 			<MainInfo>
 				<PriceContainer>
-					S/ <Price>{price}</Price> <Small>/ AL MES</Small>{' '}
+					S/ <Price>{context.standard ? '29' : '59'}</Price> <Small>/ AL MES</Small>{' '}
 				</PriceContainer>
 				<Description>
 					Lore ipsum dolor sit amet, consetetur sadispcing elitr, sed diam nonumy eirmod
 				</Description>
 			</MainInfo>
-			<PlanBenefits>
-				<List>
-					<ListItem included={true}>
-						✔ <span>You can get something with this plan, pretty sure it's something good</span>
-					</ListItem>
-					<ListItem included={true}>
-						✔ <span>You can get something with this plan, pretty sure it's something good</span>
-					</ListItem>
-					<ListItem included={true}>
-						✔ <span>You can get something with this plan, pretty sure it's something good</span>
-					</ListItem>
-					<ListItem included={false}>
-						✔ <span>You can get something with this plan, pretty sure it's something good</span>
-					</ListItem>
-					<ListItem included={false}>
-						✔ <span>You can get something with this plan, pretty sure it's something good</span>
-					</ListItem>
-				</List>
-			</PlanBenefits>
-			<SubmitButton>Suscribirme</SubmitButton>
+
+			<PlanBenefitsList standard={true} />
+
+			<SubmitButton to='billing'>Suscribirme</SubmitButton>
 		</Container>
 	);
 };

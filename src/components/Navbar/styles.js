@@ -1,7 +1,7 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const Container = styled.div`
-	display: absolute;
 	top: 0;
 	width: 100%;
 	padding: .6rem;
@@ -12,7 +12,7 @@ export const Container = styled.div`
 	background: #020202;
 `;
 
-export const Logo = styled.h1`
+export const Logo = styled(Link)`
 	font-size: 1.5rem;
 	font-weight: bold;
 	color: #f3f3f3;

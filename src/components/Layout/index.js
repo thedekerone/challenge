@@ -6,7 +6,7 @@ export const Layout = (props) => {
 	return (
 		<React.Fragment>
 			<GloblalStyle />
-			<Navbar />
+			<Navbar to='/' />
 			{props.children}
 		</React.Fragment>
 	);
